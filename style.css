@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  font-size: 17px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+main { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+a { color: #111; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-size: 2rem; text-align: center; margin: 0 0 48px; letter-spacing: .15em; }
+
+/* はじめに */
+.intro { border-top: 1px solid #111; border-bottom: 1px solid #111; padding: 24px 0; margin-bottom: 48px; }
+.intro h2 { font-size: 1.15rem; margin: 0 0 12px; }
+.intro p { margin: 0 0 12px; }
+.intro p:last-child { margin: 0; }
+
+/* 目次 */
+.toc { margin-bottom: 64px; }
+.toc-title { font-size: 1.15rem; margin: 0 0 12px; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc > ol > li { padding: 10px 0; border-bottom: 1px solid #ddd; }
+.toc > ol > li > a { font-weight: bold; }
+.toc ol ol { padding-left: 1em; font-size: .92rem; }
+.toc ol ol li { padding: 2px 0; }
+
+/* アコーディオン（編） */
+details { border-top: 1px solid #111; scroll-margin-top: 16px; }
+details:last-of-type { border-bottom: 1px solid #111; }
+summary {
+  cursor: pointer; list-style: none; padding: 24px 0;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "閉じる −"; flex-shrink: 0; font-size: .8rem; border: 1px solid #111; padding: 2px 10px; }
+details:not([open]) summary::after { content: "開く ＋"; }
+.part { font-size: 1.4rem; font-weight: bold; line-height: 1.5; }
+.sub { display: block; font-size: .95rem; font-weight: normal; color: #444; margin-top: 4px; }
+.part-body { padding-bottom: 48px; }
+.author { text-align: right; font-size: .9rem; margin: 0 0 8px; }
+
+/* 本文 */
+article h2 { font-size: 1.3rem; line-height: 1.6; border-top: 1px solid #ddd; padding-top: 32px; margin: 56px 0 24px; scroll-margin-top: 16px; }
+article h2:first-child { margin-top: 16px; }
+article h3 { font-size: 1.08rem; border-left: 3px solid #111; padding-left: 12px; margin: 40px 0 16px; line-height: 1.6; }
+article p { margin: 0 0 1.2em; }
+.soon { color: #999; }
+
+/* 次編予告 */
+.next-part { border: 1px solid #111; padding: 24px; margin-top: 56px; }
+.next-part h2 { margin: 0; font-size: 1.15rem; }
+.next-part .label { font-size: .85rem; margin: 0 0 8px; }
+.next-part .sub { margin-bottom: 16px; }
+.next-part p:last-child { margin-bottom: 0; }
+
+.to-top { display: block; text-align: center; margin-top: 48px; font-size: .9rem; }
+
+/* タブレット */
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  main { padding: 40px 20px 80px; }
+  h1 { font-size: 1.7rem; margin-bottom: 36px; }
+  .part { font-size: 1.25rem; }
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+  body { font-size: 15.5px; line-height: 1.9; }
+  main { padding: 32px 16px 64px; }
+  h1 { font-size: 1.45rem; letter-spacing: .08em; margin-bottom: 28px; }
+  .intro { padding: 20px 0; margin-bottom: 36px; }
+  .toc { margin-bottom: 48px; }
+  summary { padding: 20px 0; align-items: flex-start; }
+  summary::after { font-size: .72rem; padding: 2px 6px; margin-top: 4px; }
+  .part { font-size: 1.1rem; }
+  .sub { font-size: .85rem; }
+  article h2 { font-size: 1.15rem; margin-top: 44px; padding-top: 24px; }
+  article h3 { font-size: 1rem; margin-top: 32px; }
+  .next-part { padding: 18px; }
+}
