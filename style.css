@@ -19,6 +19,7 @@ h1 { font-size: 2rem; text-align: center; margin: 0 0 48px; letter-spacing: .15e
 .intro h2 { font-size: 1.15rem; margin: 0 0 12px; }
 .intro p { margin: 0 0 12px; }
 .intro p:last-child { margin: 0; }
+.intro .credit { text-align: right; font-size: .9rem; margin-top: 16px; }
 
 /* 目次 */
 .toc { margin-bottom: 64px; }
